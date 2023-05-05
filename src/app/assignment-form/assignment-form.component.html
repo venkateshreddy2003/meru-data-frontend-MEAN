@@ -1,0 +1,69 @@
+<div mat-dialog-title>
+  <h1>Assignment Form</h1>
+</div>
+<form [formGroup]="assignmentForm" (ngSubmit)="formSubmit()">
+  <div mat-dialog-content>
+    <div class="class-1">
+      <mat-form-field appearance="outline" class="class-3">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Ex Sample assignment"
+          formControlName="name"
+        />
+      </mat-form-field>
+    </div>
+    <div class="class-1">
+      <mat-form-field appearance="outline" class="class-3">
+        <mat-label>Subject</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Ex Maths"
+          formControlName="subject"
+        />
+      </mat-form-field>
+    </div>
+    <div class="class-1">
+      <mat-form-field appearance="outline" class="class-3">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input
+            matStartDate
+            placeholder="Start date"
+            formControlName="startDate"
+          />
+          <input matEndDate placeholder="End date" formControlName="endDate" />
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <div class="class-4">
+      <mat-form-field appearance="outline">
+        <mat-label>start time:</mat-label>
+        <input type="time" matInput formControlName="startTime" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>end time:</mat-label>
+        <input type="time" matInput formControlName="endTime" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="class-2">
+    <button
+      mat-raised-button
+      class="class-5"
+      type="button"
+      [mat-dialog-close]="false"
+    >
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" class="class-5">Save</button>
+  </div>
+</form>

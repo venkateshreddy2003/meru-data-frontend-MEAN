@@ -1,0 +1,19 @@
+.class-1 {
+  margin-top: 10px;
+}
+.class-3 {
+  width: 100%;
+}
+.class-4 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 10px;
+}
+.class-2 {
+  display: flex;
+  justify-content: center;
+}
+.class-5 {
+  flex-grow: 1;
+}

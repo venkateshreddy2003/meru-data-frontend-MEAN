@@ -1,0 +1,39 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+.main-body {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+h1 {
+  text-align: center;
+  font-weight: 500;
+}
+/* .mat-tool-width {
+  justify-self: end;
+} */
+@media screen and (max-width: 543px) {
+  mat-toolbar {
+    width: 543px;
+  }
+  .main-body {
+    width: 543px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: 0 auto;
+  }
+}
