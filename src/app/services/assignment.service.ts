@@ -8,13 +8,13 @@ export class AssignmentService {
   constructor(private _http: HttpClient) {}
   addAssignment(data: any): Observable<any> {
     return this._http.post(
-      `https://meru-data-backend.onrender.com/create-assignment`,
+      `https://adorable-overcoat-dog.cyclic.app/create-assignment`,
       data
     );
   }
   getAssignmentList(): Observable<any> {
     return this._http.get(
-      `https://meru-data-backend.onrender.com/get-assignments`
+      `https://adorable-overcoat-dog.cyclic.app/get-assignments`
     );
   }
 }
